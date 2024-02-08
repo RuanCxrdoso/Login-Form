@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+}
+
+.left-section {
+  background-color: var(--background);
+  height: 100%;
+  width: 50vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-logo {
+  position: absolute;
+  top: 43px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-title {
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  color: var(--text-title);
+  cursor: pointer;
+}
+
+.container {
+  background-color: var(--form-background);
+  padding: 55px 120px;
+}
+
+.form-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.login-title-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-title {
+  display: inline;
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-title);
+}
+
+.login-p {
+  padding-top: 5px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  color: var(--text-base);
+}
+
+label {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  color: var(--text-base);
+}
+
+.email-box {
+  margin-top: 27px;
+}
+
+.email-input {
+  border: 1px solid #868686;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+}
+
+#email {
+  background-color: var(--form-background);
+  border: none;
+  margin-left: 6px;
+}
+
+#email:focus {
+  outline: none;
+}
+
+.password-box {
+  margin-top: 20px;
+}
+
+.password-input {
+  border: 1px solid #868686;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 63px;
+}
+
+.password-input-inside {
+  display: flex;
+  align-items: center;
+}
+
+#password {
+  background-color: var(--form-background);
+  border: none;
+  margin-left: 6px;
+}
+
+#password {
+  outline: none;
+}
+
+.eye-btn {
+  background-color: var(--form-background);
+  border: none;
+  cursor: pointer;
+}
+
+.form-options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check input {
+  display: none;
+}
+
+.form-check input + label::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background-color: var(--form-background);
+  border: 1px solid #868686;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+.form-check input:checked + label::before {
+  background-image: url(../images/check.svg);
+  background-color: #ffc632;
+}
+
+.lembreMe-label {
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.forgot-password {
+  text-decoration: none;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffc632;
+}
+
+.login-btn {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  color: var(--form-background);
+  background-color: #ffc632;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.login-btn:hover {
+  color: #ffc632;
+  background-color: var(--form-background);
+}
+
+.register-box {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register {
+  cursor: default;
+  margin-top: 5px;
+  text-decoration: none;
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffc632;
+}
+
+.a-register {
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffc632;
+}
+
+.right-section {
+  height: 100%;
+  width: 50vw;
+}
+
+.right-image {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 426px) {
+  .left-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    background-color: transparent;
+  }
+
+  .right-section {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-section {
+    width: 100vw;
+  }
+
+  .right-section {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
